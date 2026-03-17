@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgba(190, 190, 190, 0.575);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+
+
+        }
+        .cont {
+            background-color: #ececec;
+            border-radius: 12px;
+            box-shadow: 0 4px 70px rgb(248, 248, 248);;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    
+        input {
+            padding: 10px;
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            width: 250px;
+            box-sizing: border-box; 
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        input:focus {
+            border-color: #0eb4aca2;
+            outline: none; 
+            box-shadow: inset 0 0 7px #0eb4aca2;
+        }
+
+        button {
+            padding: 10px 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            border: 1px solid #bdbdbd;
+            transition: 0.3s;
+
+        }
+
+        button:hover {
+            background-color: #bdbdbd;
+
+        }
+
+
+       
+        
+
+    </style>
+    
+</head>
+<body>
+ <div class="cont">
+    <h1 id="idh1"></h1>
+    <input type="text" id="inputId" placeholder="enter something"/>
+    <button id="btnId">click</button>
+    </div>
+</body>
+
+<script>
+    const input = document.getElementById('inputId');
+    const btn = document.getElementById('btnId');
+    const h1 = document.getElementById('idh1');
+
+    btn.addEventListener('click', () => {
+        const textFromInput = input.value;
+        h1.textContent = textFromInput;
+    })
+</script>
+</html>
