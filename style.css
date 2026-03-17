@@ -1,0 +1,12 @@
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(14, 37, 110);
+    background-color: rgb(177, 177, 177);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    
+}

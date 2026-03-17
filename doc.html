@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+ <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: rgb(14, 37, 110);
+            background-color: rgb(230, 230, 230); 
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            padding: 20px; 
+            box-sizing: border-box; 
+        }
+
+      
+        h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: rgb(14, 37, 110); 
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f09c;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgb(248, 248, 248);
+        }
+
+        input {
+            padding: 15px 20px; 
+            margin: 7px 0; 
+            border: 1px solid #a5c4d6; 
+            border-radius: 6px; 
+            
+            font-size: 1.1em;
+            box-sizing: border-box; 
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        input:focus {
+            border-color: #382ec0;
+            outline: none; 
+            box-shadow: inset 0 0 5px #2f318f8f;
+            
+        }
+
+        #btnID {
+            margin-top: 20px;
+            padding: 12px 50px; 
+            border-radius: 2px;
+            border: 1px solid black;
+            transition: background-color 0.3s ease, transform 0.1 ease;
+            cursor: pointer;
+            
+            
+        }
+
+        #btnID:hover {
+            background-color: rgb(209, 209, 209);
+
+           
+        }
+
+        #result {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+        
+
+
+
+
+    
+    
+
+    
+
+</style>
+<body>
+    <div class="box">
+    <h2>Разрешение на пиво</h2>
+    <input type="number" id="InputId" placeholder="введите свой возраст...">
+    <button id="btnID">жми</button>
+
+    <p id="result"></p>
+    </div>
+    </body>
+
+    <script>
+        const input = document.getElementById('InputId');
+        const btn = document.getElementById('btnID');
+        const resultText = document.getElementById('result');
+
+
+        let number = 
+        btn.addEventListener('click', () => {
+            const Inputage = input.value;
+            const age = Number(Inputage);
+
+            if (isNaN(age) || age<=0 ) {
+            resultText.textContent = "Вы ввели некорректно";
+        }
+
+            else if ( age < 18 || age >= 60) { 
+                resultText.textContent = 'Вам нельзя пиво';
+        }
+      
+        else {
+            resultText.textContent = 'Вам можно пить пиво'
+        }
+
+
+ }
+
+        )
+    </script>
